@@ -941,15 +941,6 @@ if (isCmd && isGroup)
 console.log(color('[ CMD ]'), color(time, 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
 switch (command) {
 
-case 'get':
-case 'fetch':
-if (!isUrl(args[0]))return reply('Awali URL Dengan *https* Atau *http*')
-fetch(`${args[0]}`).then(res => res.text())
-.then(sate =>{
-reply(sate)
-}) 
-break
-
 //Semua Menu
 case 'menu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
